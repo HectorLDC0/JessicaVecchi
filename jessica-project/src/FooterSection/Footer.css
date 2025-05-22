@@ -1,0 +1,169 @@
+ body {
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        /* Container principal do footer */
+        .footer {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: fit-content;
+            background-color: #00143d;
+            color: #ffffff;
+            padding: 3.5rem 12rem;
+        }
+
+        /* Container do conteúdo principal */
+        .footer-content {
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* Seção do logo */
+        .logo-section {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            justify-content: center;
+            width: 35%;
+        }
+
+        /* Seção de links e newsletter */
+        .links-section {
+            display: flex;
+            flex-direction: row;
+            width: 65%;
+            justify-content: end;
+            gap: 4rem;
+            white-space: nowrap;
+        }
+
+        /* Seção legal */
+        .legal-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+
+        .legal-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .section-title {
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #9ca3af;
+            padding-bottom: 0.75rem;
+        }
+
+        .legal-links a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .legal-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Seção newsletter */
+        .newsletter-section {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .newsletter-description {
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            align-items: center;
+        }
+
+        .email-input {
+            width: 100%;
+            background-color: #f3f4f6;
+            color: #374151;
+            border-radius: 0.5rem 0 0 0.5rem;
+            padding: 0.75rem 1rem;
+            border: none;
+            outline: none;
+        }
+
+        .subscribe-button {
+            background-color: #7e22ce;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .subscribe-button:hover {
+            background-color: #6b21a8;
+        }
+
+        /* Divisor */
+        .divider {
+            width: 100%;
+            border-top: 1px solid #6b7280;
+            margin: 2rem 0;
+        }
+
+        /* Copyright */
+        .copyright {
+            text-align: center;
+        }
+
+        /* Responsividade */
+        @media (max-width: 1024px) {
+            .footer {
+                padding: 3.5rem 2rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .logo-section,
+            .links-section {
+                width: 100%;
+            }
+            
+            .links-section {
+                justify-content: flex-start;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer {
+                padding: 2rem 1rem;
+            }
+            
+            .links-section {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .email-input {
+                border-radius: 0.5rem;
+            }
+            
+            .subscribe-button {
+                border-radius: 0.5rem;
+                width: 100%;
+            }
+        }
