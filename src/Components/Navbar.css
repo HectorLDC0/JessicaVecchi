@@ -1,0 +1,14 @@
+nav{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+
+nav img{
+    object-fit: contain;
+}

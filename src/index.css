@@ -1,0 +1,24 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+section{
+  height: 100dvh;
+  position: relative;
+  display: flex;
+}
+
+.heroSection{
+  background-color: #f4efe6;
+}
+
+.aboutMeSection{
+  background-color: #001751;
+}
+
+.blogSection{
+  background-color: #f4efe6;
+}
