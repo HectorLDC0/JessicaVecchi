@@ -8,3 +8,12 @@
     top: 14%;
     position: absolute;
 }
+
+button{
+    width: 200px;
+    height: 50px;
+}
+
+.heroWrapper{
+    position: absolute;
+}

@@ -1,24 +1,46 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow-y: scroll;
   overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;           
+  -ms-overflow-style: none;        
 }
 
-section{
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;                   
+}
+
+section {
   height: 100dvh;
-  position: relative;
+  scroll-snap-align: start;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.heroSection{
+
+.heroSection {
   background-color: #f4efe6;
 }
 
-.aboutMeSection{
+.aboutMeSection {
   background-color: #001751;
 }
 
-.blogSection{
+.blogSection {
   background-color: #f4efe6;
+}
+
+.footerSection{
+  background-color: #001751;
 }

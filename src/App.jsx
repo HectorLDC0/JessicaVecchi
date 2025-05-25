@@ -1,5 +1,6 @@
 import Hero from './HeroSection/Hero'
 import Footer from './FooterSection/Footer'
+import AboutMe from './AboutMeSection/AboutMe'
 
 function App() {
   return (
@@ -9,12 +10,13 @@ function App() {
       </section>
 
       <section className='aboutMeSection'>
+        <AboutMe />
       </section>
 
       <section className='blogSection'>
       </section>
       
-      <section>
+      <section className='footerSection'>
         <Footer />
       </section>
     
