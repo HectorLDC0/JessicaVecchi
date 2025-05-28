@@ -1,0 +1,52 @@
+/* Estilos base (desktop) */
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5%;
+    z-index: 100;
+    box-sizing: border-box;
+}
+
+/* Logo */
+img {
+    width: 300px;
+    object-fit: contain;
+}
+
+/* Tablets (768px - 1024px) */
+@media screen and (max-width: 1024px) {
+    nav {
+        padding: 4%;
+    }
+
+    img {
+        width: 250px;
+        object-fit: contain;
+    }
+
+}
+
+/* Tablets pequenos (481px - 768px) */
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 6%;
+    }
+
+    img {
+        width: 220px;
+        object-fit: contain;
+    }
+
+}
+
+/* Mobile (até 480px) */
+@media screen and (max-width: 480px) {
+    nav {
+        padding: 10%;
+    }
+}
