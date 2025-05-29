@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400..900&display=swap');
 
-=======
->>>>>>> 65a397f6b6a86a4ba332491836d7a6424e88fc8d
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +21,6 @@ body::-webkit-scrollbar {
   display: none;                   
 }
 
-<<<<<<< HEAD
 :root {
   --font-primaria: "ode";
   --font-secundaria: "Ruda";
@@ -34,8 +30,6 @@ body::-webkit-scrollbar {
   
 }
 
-=======
->>>>>>> 65a397f6b6a86a4ba332491836d7a6424e88fc8d
 section {
   height: 100dvh;
   scroll-snap-align: start;
@@ -47,7 +41,6 @@ section {
 
 
 .heroSection {
-<<<<<<< HEAD
   background-color: var(--bege);
 }
 
@@ -61,19 +54,4 @@ section {
 
 .footerSection{
   background-color: var(--blue);
-=======
-  background-color: #f4efe6;
-}
-
-.aboutMeSection {
-  background-color: #001751;
-}
-
-.blogSection {
-  background-color: #f4efe6;
-}
-
-.footerSection{
-  background-color: #001751;
->>>>>>> 65a397f6b6a86a4ba332491836d7a6424e88fc8d
 }
