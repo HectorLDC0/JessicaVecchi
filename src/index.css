@@ -27,7 +27,6 @@ body::-webkit-scrollbar {
   --blue: #001751;
   --bege: #f4efe6;
   --brown:#a0421d;
-  
 }
 
 section {
@@ -53,5 +52,5 @@ section {
 }
 
 .footerSection{
-  background-color: var(--blue);
+  background-color: var(--bege);
 }
