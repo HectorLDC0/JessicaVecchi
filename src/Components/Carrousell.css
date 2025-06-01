@@ -1,7 +1,7 @@
 /* Carousel.css */
 .carousel-container {
-  width: 1200px;
-  margin: 0 auto;
+  width: calc(100vw - 200px); /* Remove os 200px (100px de cada lado) */
+  max-width: 1200px; /* Mantém o limite máximo que você tinha */
   padding: 20px;
   position: absolute;
   bottom: 10%;
@@ -60,54 +60,3 @@
 }
 
 /* Responsividade */
-@media (max-width: 768px) {
-  .carousel-container {
-    padding: 10px;
-  }
-  
-  .carousel-content {
-    gap: 5px;
-    padding: 0 5px;
-  }
-  
-  .carousel-image {
-    height: 200px;
-  }
-  
-  .carousel-btn {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .carousel-btn-left {
-    left: 10px;
-  }
-  
-  .carousel-btn-right {
-    right: 10px;
-  }
-}
-
-@media (max-width: 480px) {
-  .carousel-content {
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  .carousel-image {
-    height: 150px;
-  }
-  
-  .carousel-btn {
-    width: 35px;
-    height: 35px;
-  }
-  
-  .carousel-btn-left {
-    left: 5px;
-  }
-  
-  .carousel-btn-right {
-    right: 5px;
-  }
-}

@@ -6,3 +6,8 @@
     display: flex;
     flex-direction: column;
 }
+
+.blogP{
+    font-family: var(--font-secundaria);
+    color: var(--blue);
+}

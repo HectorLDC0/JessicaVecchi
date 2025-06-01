@@ -6,7 +6,7 @@ function Blog() {
         <>
             <div className="blogWrapper">
                 <h1>Aqui sua intensidade é bem-vinda!</h1>
-                <p>lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt<br></br>ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation</p>
+                <p className="blogP">lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt<br></br>ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation</p>
             </div>
             <Carrousel />
         </>

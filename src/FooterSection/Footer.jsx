@@ -17,9 +17,9 @@ function Footer() {
                     <div class="links-section">
                         <div class="legal-section">
                             <div class="legal-links">
-                                <a href="#xxx">+353 83 874 7398</a>
-                                <a href="#xxx">@jessicavecchi.psi</a>
-                                <a href="#xxx">jessicavecchi@gmail.com</a>
+                                <a href="https://wa.me/353838587900?text=Olá%2C%20gostaria%20de%20mais%20informações.">+353 83 874 7398</a>
+                                <a href="https://www.instagram.com/jessica_vecchi/">@jessicavecchi.psi</a>
+                                <a href="mailto:jessicavecchi@gmail.com">jessicavecchi@gmail.com</a>
                             </div>
                         </div>
 
@@ -37,8 +37,8 @@ function Footer() {
                         <h4>© 2025 Jessica Vecchi - Todos os direitos reservados.</h4>
                     </div>
                     <div className='us'>
-                        <h4>Design: Júlia Garbozza</h4>
-                        <h4>Desenvolvido por: Hector Diel</h4>
+                        <h4><a href="https://www.linkedin.com/in/juliagarbozza-graphicdesigner/">Design: Júlia Garbozza</a></h4>
+                        <h4><a href="https://www.linkedin.com/in/hectordiel/">Desenvolvido por: Hector Diel</a></h4>
                     </div>
                 </div>
             </footer >
