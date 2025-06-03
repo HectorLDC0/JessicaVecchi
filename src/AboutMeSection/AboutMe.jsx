@@ -7,7 +7,7 @@ function AboutMe() {
       <div className="bb"></div>
       
       {/* Primeira seção - fade in ao carregar */}
-      <FadeWrapper type="load" delay={500}>
+      <FadeWrapper type="load" delay={500} direction="up">
         <img></img>
         <h1>Ola!</h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vero fugiat id illum quo quidem, laboriosam nihil eum labore neque! Quas aspernatur nesciunt veritatis obcaecati reprehenderit! Inventore alias nesciunt excepturi.</p>

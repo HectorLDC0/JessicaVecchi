@@ -1,6 +1,6 @@
 // FadeWrapper.jsx
 import { useState, useEffect, useRef } from 'react';
-import './FadeWrapper.css';
+
 
 // Hook para detectar scroll
 function useIntersectionObserver(options = {}) {
