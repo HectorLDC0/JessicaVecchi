@@ -1,12 +1,20 @@
 import './Navbar.css'
-import FadeWrapper from '../Components/FadeWrapper';
+
 
 function Nav() {
     return (
         <nav>
-            <FadeWrapper>
-                <img src="/assets/Logo.svg" alt="Logo" />
-            </FadeWrapper>
+
+            <div className="container">
+                <input className="label-check" id="label-check" type="checkbox" />
+                <label htmlFor="label-check" className="hamburger-label">
+                    <div className="line1"></div>
+                    <div className="line2"></div>
+                    <div className="line3"></div>
+                </label>
+            </div>
+
+            <img src="/assets/Logo.svg" alt="Logo" />
         </nav>
     )
 }

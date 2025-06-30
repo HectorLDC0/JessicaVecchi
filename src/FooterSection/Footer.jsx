@@ -18,7 +18,7 @@ function Footer() {
                         <div class="legal-section">
                             <div class="legal-links">
                                 <a href="https://wa.me/353838587900?text=Olá%2C%20gostaria%20de%20mais%20informações.">+353 83 874 7398</a>
-                                <a href="https://www.instagram.com/jessica_vecchi/">@jessicavecchi.psi</a>
+                                <a href="https://www.instagram.com/jessicavecchi.psi/">@jessicavecchi.psi</a>
                                 <a href="mailto:jessicavecchi@gmail.com">jessicavecchi@gmail.com</a>
                             </div>
                         </div>

@@ -2,6 +2,7 @@ import Hero from './HeroSection/Hero'
 import Footer from './FooterSection/Footer'
 import AboutMe from './AboutMeSection/AboutMe'
 import Blog from './BlogSection/Blog'
+import Accordion from './FaqSection/Accordion'
 
 function App() {
   return (
@@ -17,11 +18,15 @@ function App() {
       <section className='blogSection'>
         <Blog />
       </section>
-      
+
+      <section className='faqSection'> 
+        <Accordion />
+      </section>
+
       <section className='footerSection'>
         <Footer />
       </section>
-    
+
     </>
   )
 }

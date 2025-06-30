@@ -1,50 +1,21 @@
 import './AboutMe.css';
-import FadeWrapper from '../Components/FadeWrapper';
+import Esteira from '../Components/Esteira';
 
 function AboutMe() {
   return (
     <>
-      <div className="bb"></div>
-      
-      {/* Primeira seção - fade in ao carregar */}
-      <FadeWrapper type="load" delay={500} direction="up">
-        <img></img>
-        <h1>Ola!</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia vero fugiat id illum quo quidem, laboriosam nihil eum labore neque! Quas aspernatur nesciunt veritatis obcaecati reprehenderit! Inventore alias nesciunt excepturi.</p>
-      </FadeWrapper>
-
-      {/* Parte 2 - cada item com fade in no scroll */}
-      <div className='statusWrapper'>
-        <FadeWrapper type="scroll" delay={100} direction="up">
-          <div>
-            <img></img>
-            <div>
-              <h1>Ola!</h1>
-              <p>muitos anos psicologando e bla bla</p>
-            </div>
-          </div>
-        </FadeWrapper>
-
-        <FadeWrapper type="scroll" delay={200} direction="left">
-          <div>
-            <img></img>
-            <div>
-              <h1>Ola!</h1>
-              <p>muitos anos psicologando e bla bla</p>
-            </div>
-          </div>
-        </FadeWrapper>
-
-        <FadeWrapper type="scroll" delay={400} direction="right">
-          <div>
-            <img></img>
-            <div>
-              <h1>Ola!</h1>
-              <p>muitos anos psicologando e bla bla</p>
-            </div>
-          </div>
-        </FadeWrapper>
+      <img src='assets/outline1.svg' className='jessicaSvg' />
+      <div className='mainWrapper' >
+        <img src='assets/Jessica.jpg' className='jessicaImg' />
+        <p className='aboutmeP'>
+          Sou psicóloga há mais de 10 anos, brasileira vivendo em Dublin, e atendo principalmente pessoas que, assim como eu, estão atravessando suas próprias travessias longe de casa. Depois de anos trabalhando com psicanálise e psicologia hospitalar, me redescobri na Terapia Cognitivo-Comportamental (TCC), especialmente depois do meu diagnóstico de TDAH aos 29 anos.<br></br> <br></br> <br></br>
+          Hoje, além de acolher quem busca se entender melhor, também acompanho meus pacientes na busca por mais autoestima e liberdade no dia a dia. Atendo online, brasileiros que estão espalhados por mais de 10 países.
+        </p>
       </div>
+      <img src='assets/outline2.svg' className='solSvg' />
+
+
+      <Esteira />
     </>
   );
 }

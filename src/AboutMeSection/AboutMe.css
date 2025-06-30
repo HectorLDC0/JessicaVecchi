@@ -1,7 +1,43 @@
-.bb{
-    background-color: red;
+.aboutmeP {
+    color: #f4efe6;
+}
+
+.mainWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+    gap: 100px;
+    z-index: 1;
+    height: 525px;
     position: absolute;
-    width: 100vw;
-    height: 40%;
-    top:0;
+    left: 200px;
+}
+
+.jessicaImg {
+    position: relative;
+}
+
+.mainWrapper p {
+    max-width: 30%;
+    text-align: left;
+    font-family: var(--font-secundaria);
+    font-size: 18pt;
+    font-weight: 100;
+}
+
+.jessicaSvg {
+    position: absolute;
+    left: -20px;
+    top: 160px;
+    width: 40em;
+    height: 36em;
+}
+
+.solSvg {
+    position: absolute;
+    width: 32em;
+    height: 32em;
+    bottom: -50px;
+    right: -260px;
 }
