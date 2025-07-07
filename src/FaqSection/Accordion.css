@@ -1,8 +1,19 @@
+.title {
+  font-family: var(--font-primaria);
+  position: absolute;
+  color: var(--blue);
+  font-weight: 500;
+  font-size: 51pt;
+  top: 100px;
+}
+
 .accordion-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  margin-top: 120px;
   font-family: sans-serif;
+
 }
 
 .accordion-item {
@@ -12,7 +23,7 @@
 }
 
 .accordion-toggle {
-  display: none;  
+  display: none;
 }
 
 .accordion-label {
@@ -31,49 +42,85 @@
   max-height: 0;
   overflow: hidden;
   transition: 0.3s;
+  font-family: var(--font-secundaria);
+  color: var(--blue);
+  font-size: 14pt;
 }
 
-.accordion-toggle:checked ~ .accordion-content {
-  max-height: 200px; /* Ajuste conforme necessário */
+.accordion-toggle:checked~.accordion-content {
+  max-height: 200px;
+  /* Ajuste conforme necessário */
 }
 
 .accordion-label {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
 }
 
 .accordion-icon-wrapper {
-    position: relative;
-    width: 24px;
-    height: 24px;
-    right: 20px;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  right: 20px;
 }
 
 .accordion-icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: transform 0.1s ;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.1s;
 }
 
 .accordion-icon-plus {
-    
-    transform: rotate(0deg);
+
+  transform: rotate(0deg);
 }
 
 .accordion-icon-minus {
-    opacity: 0;
-    transform: rotate(90deg);
+  opacity: 0;
+  transform: rotate(90deg);
 }
 
-.accordion-toggle:checked + .accordion-label .accordion-icon-plus {
-    opacity: 0;
-    transform: rotate(90deg);
+.accordion-toggle:checked+.accordion-label .accordion-icon-plus {
+  opacity: 0;
+  transform: rotate(90deg);
 }
 
-.accordion-toggle:checked + .accordion-label .accordion-icon-minus {
-    opacity: 1;
-    transform: rotate(0deg);
+.accordion-toggle:checked+.accordion-label .accordion-icon-minus {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+/*Respomsivity*/
+@media (max-width: 1300px) {
+  .accordion-container {
+    margin: 100px;
+  }
+
+  .title {
+    font-family: var(--font-primaria);
+    position: absolute;
+    color: var(--blue);
+    font-weight: 500;
+    font-size: 41pt;
+    top: 100px;
+  }
+}
+
+@media (max-width: 800px) {
+  .accordion-container {
+    margin: 100px;
+    margin-top: 200px;
+  }
+
+  .title {
+    font-family: var(--font-primaria);
+    position: absolute;
+    color: var(--blue);
+    font-weight: 500;
+    font-size: 31pt;
+    top: 120px;
+  }
 }

@@ -3,10 +3,10 @@ import './Footer.css'
 function Footer() {
     return (
         <>
-        <img src='assets/Hero_bluePattern.svg'  className='division'/>
+            <img src='assets/Hero_bluePattern.svg' className='division' />
 
             <footer class="footer">
-                 <img src='assets/footerPattern.svg'  className='footersvg'/>
+                <img src='assets/footerPattern.svg' className='footersvg' />
                 <div class="footer-content">
                     <div class="logo-section">
                         <div class="logo-container">
@@ -14,21 +14,16 @@ function Footer() {
                         </div>
                     </div>
 
-                    <div class="links-section">
-                        <div class="legal-section">
-                            <div class="legal-links">
-                                <a href="https://wa.me/353838587900?text=Olá%2C%20gostaria%20de%20mais%20informações.">+353 83 874 7398</a>
-                                <a href="https://www.instagram.com/jessicavecchi.psi/">@jessicavecchi.psi</a>
-                                <a href="mailto:jessicavecchi@gmail.com">jessicavecchi@gmail.com</a>
-                            </div>
-                        </div>
+                    <div className='text'>
+                        <p>Toda mudança começa com um primeiro passo. Se você sente que é tempo de olhar pra dentro com mais carinho e consciência, me chama!</p>
+                    </div>
 
-                        <div class="newsletter-section">
-                            <p class="newsletter-description">Se inscreva e receba textos semanais<br></br>para acompanhar sua jornada!.</p>
-                            <form class="newsletter-form">
-                                <input type="email" name="email" placeholder="Seu email aqui" class="email-input" autocomplete="off" required />
-                                <button type="submit" class="subscribe-button">Eu quero!</button>
-                            </form>
+                    <div class="links-section">
+
+                        <div class="legal-links">
+                            <a href="https://wa.me/353838587900?text=Olá%2C%20gostaria%20de%20mais%20informações.">+353 83 874 7398</a>
+                            <a href="https://www.instagram.com/jessicavecchi.psi/">@jessicavecchi.psi</a>
+                            <a href="mailto:jessicavecchi@gmail.com">jessicavecchi@gmail.com</a>
                         </div>
                     </div>
                 </div>

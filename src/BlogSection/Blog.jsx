@@ -15,7 +15,7 @@ function Blog() {
                 <div className="imagesWrapper">
                     <div>
                         <img src='assets/post.jpg' />
-                        <p>Sobre o método</p>
+                        <p>Sobre o meu método</p>
                     </div>
 
                     <div>
@@ -30,6 +30,8 @@ function Blog() {
 
                 </div>
             </div>
+
+            <img className="blogSun" src="/assets/outline2.svg" />
         </>
     )
 }

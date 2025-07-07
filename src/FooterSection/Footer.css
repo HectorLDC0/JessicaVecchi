@@ -19,7 +19,7 @@
     justify-content: center;
     width: 100%;
     height: 75%;
-    color: #ffffff;
+    color: #f4efe6;
     background-color: var(--blue);
     padding: clamp(2rem, 5vw, 3.5rem) clamp(1rem, 10vw, 12rem);
     bottom: 0px;
@@ -29,10 +29,9 @@
 /* Container do conteúdo principal */
 .footer-content {
     display: flex;
-    flex-direction: row;
     align-items: center;
     margin-top: clamp(4%, 8vw, 8%);
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
     gap: clamp(10rem, 5vw, 10rem);
 }
@@ -50,99 +49,45 @@
     height: auto;
 }
 
-/* Seção de links e newsletter */
+.text {
+    width: 100%;
+    max-width: 600px;
+    font-size: clamp(16px, 2.5vw, 22pt);
+    text-align: justify;
+    font-family: var(--font-primaria);
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+
+/* Seção de links*/
 .links-section {
     display: flex;
     font-family: var(--font-secundaria);
     justify-content: space-around;
-    flex-grow: 1;
 
-}
 
-.legal-section {
-    display: grid;
-    grid-template-columns: 1fr;
 }
 
 .legal-links {
     display: flex;
     flex-direction: column;
-    gap: clamp(0.5rem, 2vw, 2rem);
+    gap: 35px;
     font-size: clamp(8px, 1.8vw, 16pt);
 }
 
 .legal-links a {
-    color: #ffffff;
+    color: #f4efe6;
     text-decoration: none;
-    padding: clamp(2px, 0.8vw, 8px) clamp(4px, 1.5vw, 12px);
-    border-radius: clamp(2px, 0.8vw, 6px);
-    transition: all 0.3s ease;
 }
 
 .legal-links a:hover {
     text-decoration: underline;
-    background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Seção newsletter */
-.newsletter-section {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    width: clamp(200px, 35vw, 400px);
-}
-
-
-.newsletter-description {
-    color: #ffffff;
-    margin-bottom: 0.5rem;
-    font-family: var(--font-primaria);
-    font-weight: 300;
-    font-size: clamp(10px, 2.2vw, 21pt);
-    line-height: 1.4;
-}
-
-.newsletter-form {
-    display: flex;
-    align-items: center;
-    gap: clamp(8px, 2.2vw, 30px);
-}
-
-.email-input {
-    flex: 1;
-    background-color: transparent;
-    padding: clamp(4px, 1.5vw, 12px) clamp(6px, 2vw, 16px);
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: rgb(255, 255, 255) 1px solid;
-    outline: none;
-    color: white;
-    font-size: clamp(8px, 1.8vw, 16px);
-    min-height: clamp(24px, 4vw, 44px);
-}
-
-.email-input::placeholder {
-    color: #00246d;
-    font-size: clamp(7px, 1.6vw, 14px);
-}
-
-.subscribe-button {
-    color: white;
-    font-weight: 600;
-    border: 1px solid white;
-    padding: clamp(4px, 1.5vw, 12px) clamp(8px, 2.2vw, 24px);
-    cursor: pointer;
-    font-size: clamp(8px, 1.8vw, 16px);
-    white-space: nowrap;
-    min-height: clamp(24px, 4vw, 44px);
-    border-radius: clamp(2px, 0.8vw, 6px);
-    transition: all 0.3s ease;
-}
-
-.subscribe-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
 
 /* Copyright */
 .copyrightWrapper {
@@ -219,31 +164,6 @@
         align-items: center;
     }
 
-    .newsletter-section {
-        min-width: 100%;
-        max-width: 400px;
-    }
-
-    .newsletter-form {
-        flex-direction: column;
-        gap: clamp(1rem, 3vw, 1.5rem);
-        width: 100%;
-    }
-
-    .newsletter-description br {
-        display: none;
-    }
-
-    .email-input {
-        border-radius: clamp(6px, 1.5vw, 8px);
-        border: 1px solid white;
-        width: 100%;
-    }
-
-    .subscribe-button {
-        border-radius: clamp(6px, 1.5vw, 8px);
-        width: 100%;
-    }
 
     .copyrightWrapper {
         flex-direction: column;
@@ -277,13 +197,12 @@
         padding: 0 1rem;
     }
 
-    .newsletter-description br {
-        display: none;
-    }
 
     .us {
         flex-direction: column;
         gap: 0.5rem;
         align-items: center;
     }
+
+
 }
