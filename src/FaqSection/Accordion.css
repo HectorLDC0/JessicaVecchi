@@ -9,11 +9,9 @@
 
 .accordion-container {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin: 0% 10% 0% 10%;
   margin-top: 120px;
   font-family: sans-serif;
-
 }
 
 .accordion-item {
@@ -95,9 +93,6 @@
 
 /*Respomsivity*/
 @media (max-width: 1300px) {
-  .accordion-container {
-    margin: 100px;
-  }
 
   .title {
     font-family: var(--font-primaria);
@@ -110,17 +105,41 @@
 }
 
 @media (max-width: 800px) {
-  .accordion-container {
-    margin: 100px;
-    margin-top: 200px;
-  }
-
   .title {
     font-family: var(--font-primaria);
     position: absolute;
     color: var(--blue);
     font-weight: 500;
-    font-size: 31pt;
+    font-size: 33pt;
     top: 120px;
   }
+
+  .accordion-label {
+    font-size: 20pt;
+  }
+
+  .accordion-content {
+    font-size: 12pt;
+  }
 }
+
+@media (max-width: 480px) {
+
+   .title {
+    font-family: var(--font-primaria);
+    position: absolute;
+    color: var(--blue);
+    font-weight: 500;
+    font-size: 30pt;
+    top: 120px;
+  }
+  
+  .accordion-label {
+    font-size: 16pt;
+  }
+
+  .accordion-content {
+    font-size: 10pt;
+  }
+}
+
