@@ -108,17 +108,17 @@ section {
 /* From Uiverse.io by cssbuttons-io */
 button {
     --color: #a0421d;
-    font-family: inherit;
+    font-family: var(--font-secundaria);
     display: inline-block;
-    width: 10em;
-    height: 2.6em;
+    width: 12em;
+    height: 3em;
     line-height: 2.5em;
     margin: 20px;
     position: relative;
     cursor: pointer;
     overflow: hidden;
     border: 2px solid var(--color);
-    transition: color 0.5s;
+    transition: color 0.5s, background-color 0.5s;
     z-index: 1;
     font-size: 18px;
     border-radius: 6px;
@@ -126,35 +126,11 @@ button {
     color: var(--color);
 }
 
-button:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    background: var(--color);
-    height: 150px;
-    width: 300px;
-    border-radius: 50%;
-}
-
 button:hover {
-    color: #fff;
+    background-color: var(--color);
+    color: white;
 }
 
-button:before {
-    top: 100%;
-    left: 100%;
-    transition: all 0.9s;
-}
-
-button:hover:before {
-    top: -30px;
-    left: -30px;
-}
-
-button:active:before {
-    background: #a0421d;
-    transition: background 0s;
-}
 
 
 /* Estilos para o novo ícone de menu */
@@ -173,18 +149,18 @@ button:active:before {
 }
 
 .similar-line {
-    height: 0.2em;
+    height: 2px;
     background: var(--blue);
     border-radius: 1em;
     transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .line-1 {
-    width: 40%;
+    width: 30%;
 }
 
 .line-3 {
-    width: 90%;
+    width: 80%;
 }
 
 /* Efeitos apenas no click (quando menu está ativo) */
@@ -194,11 +170,11 @@ button:active:before {
 }
 
 #menuToggle:checked+.button .line-1 {
-    width: 90%;
+    width: 80%;
 }
 
 #menuToggle:checked+.button .line-3 {
-    width: 40%;
+    width: 30%;
 }
 
 #menuToggle {
@@ -228,6 +204,7 @@ button:active:before {
     font-size: 50pt;
     line-height: 1.2;
     text-align: center;
+    margin-top: 5%;
 }
 
 /* Pattern de fundo da hero */
@@ -237,6 +214,12 @@ button:active:before {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.heroBluePattern {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 .sideMenu {
