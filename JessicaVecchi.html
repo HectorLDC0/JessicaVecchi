@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/ocs7xwz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Jessica Vecchi</title>
+</head>
+
+<body>
+    <!-- MAIN SECTION -->
+    <section class="heroSection">
+        <nav>
+            <!-- NAVICON -->
+            <div class="openIcon">
+                <input type="checkbox" id="menuToggle">
+                <label for="menuToggle" class="button">
+                    <div class="similar-line line-1"></div>
+                    <div class="similar-line line-3"></div>
+                </label>
+            </div>
+
+            <!-- SIDEBAR -->
+            <aside id="sideMenu" class="sideMenu">
+                <ul>
+                    <li><a href="#aboutMe">SOBRE MIM</a></li>
+                    <li><a href="#blog">BLOG</a></li>
+                    <li><a href="#faq">PERGUNTAS</a></li>
+                    <li><a href="#footer">CONTATOS</a></li>
+                </ul>
+            </aside>
+
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="assets/Logo.svg">
+            </div>
+
+            <!-- SOCIALMIDIA ICONS -->
+            <div class="socialIcons">
+                <a href="https://wa.me/353838487398?text=Olá%2C%20gostaria%20de%20mais%20informações." target="_blank">
+                    <i class="fab fa-whatsapp fa-2x"></i>
+                </a>
+                <a href="https://www.instagram.com/jessicavecchi.psi/" target="_blank">
+                    <i class="fab fa-instagram fa-2x"></i>
+                </a>
+            </div>
+        </nav>
+
+        <img src="assets/Hero_YellowPattern.svg" alt="Padrão amarelo" class="heroYellowPattern">
+
+        <div class="sectionContent">
+            <div class="heroContent">
+                <p>Escolher a si mesma<br>é um ato de <strong>Coragem</strong></p>
+                <button>vamos conversar?</button>
+            </div>
+        </div>
+        <img src="assets/Hero_bluePattern.svg" alt="Padrao azul">
+    </section>
+
+    <!-- ABOUT JESSICA -->
+    <section id="aboutMe" class="aboutMeSection">
+        <div class="sectionContent">
+            <img src='assets/outline1.svg' class='jessicaSvg' />
+            <div class='mainWrapper'>
+                <img src='assets/Jessica.jpg' class='jessicaImg' />
+                <p class='aboutmeP'>
+                    Sou psicóloga há mais de 10 anos, brasileira vivendo em Dublin, e atendo principalmente pessoas que,
+                    assim como eu, estão atravessando suas próprias travessias longe de casa. Depois de anos trabalhando
+                    com psicanálise e psicologia hospitalar, me redescobri na Terapia Cognitivo-Comportamental (TCC),
+                    especialmente depois do meu diagnóstico de TDAH aos 29 anos.<br></br>
+                    Hoje, além de acolher quem busca se entender melhor, também acompanho meus pacientes na busca por
+                    mais autoestima e liberdade no dia a dia. Atendo online, brasileiros que estão espalhados por mais
+                    de 10 países.
+                </p>
+            </div>
+            <img src='assets/outline2.svg' class='solSvg' />
+
+            <!-- CAROUSEL -->
+            <div class="word-carousel-container">
+                <div class="word-carousel-wrapper">
+                    <div class="word-carousel" id="wordCarousel">
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BLOG SECTION -->
+    <section id="blog" class="blogSection">
+        <div class="sectionContent">
+            <div class="blogTituloWrapper">
+                <h1>Aqui sua intensidade é bem-vinda!</h1>
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt voluptatibus fugiat architecto,
+                    provident impedit repudiandae deleniti commodi neque, ipsam dolor sit ad est reprehenderit nostrum
+                    beatae ipsa optio molestias exercitationem.</h3>
+            </div>
+
+            <div class="blogImageWrapper">
+                <div>
+                    <img src='assets/post.jpg' />
+                    <p>Sobre o meu método</p>
+                </div>
+
+                <div>
+                    <img src='assets/post.jpg' />
+                    <p>Sobre o meu método</p>
+                </div>
+
+                <div>
+                    <img src='assets/post.jpg' />
+                    <p>Sobre o meu método</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section id="faq" class="faqSection">
+        <div class="sectionContent">
+            <p class="faqTitle">Perguntas frequentes</p>
+            <div class="accordion-container">
+                <div class="accordion-item">
+                    <input type="radio" name="accordion" id="acc1" class="accordion-toggle" />
+                    <label for="acc1" class="accordion-label">
+                        As sessões são somente online?
+                        <div class="accordion-icon-wrapper">
+                            <svg class="accordion-icon accordion-icon-plus" width="34" height="34" viewBox="0 0 24 24">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            <svg class="accordion-icon accordion-icon-minus" width="34" height="34" viewBox="0 0 24 24">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </label>
+                    <div class="accordion-content">
+                        <p>Atualmente, os atendimentos são realizados exclusivamente de forma online. Esse formato
+                            permite mais flexibilidade e conforto, além de facilitar o acesso ao cuidado terapêutico,
+                            onde quer que você esteja</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <input type="radio" name="accordion" id="acc2" class="accordion-toggle" />
+                    <label for="acc2" class="accordion-label">
+                        Qual a duração das sessões?
+                        <div class="accordion-icon-wrapper">
+                            <svg class="accordion-icon accordion-icon-plus" width="34" height="34" viewBox="0 0 24 24">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            <svg class="accordion-icon accordion-icon-minus" width="34" height="34" viewBox="0 0 24 24">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </label>
+                    <div class="accordion-content">
+                        <p>Cada encontro dura cerca de 50 minutos. Esse tempo é ideal para que possamos aprofundar os
+                            temas que surgirem e encerrar a sessão com tranquilidade.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <input type="radio" name="accordion" id="acc3" class="accordion-toggle" />
+                    <label for="acc3" class="accordion-label">
+                        Atende crianças, casais e grupos?
+                        <div class="accordion-icon-wrapper">
+                            <svg class="accordion-icon accordion-icon-plus" width="34" height="34" viewBox="0 0 24 24">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            <svg class="accordion-icon accordion-icon-minus" width="34" height="34" viewBox="0 0 24 24">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </label>
+                    <div class="accordion-content">
+                        <p>Não. No momento, meu trabalho é voltado exclusivamente para o atendimento de adultos, em
+                            sessões individuais.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <input type="radio" name="accordion" id="acc4" class="accordion-toggle" />
+                    <label for="acc4" class="accordion-label">
+                        Minha localização afeta o atendimento?
+                        <div class="accordion-icon-wrapper">
+                            <svg class="accordion-icon accordion-icon-plus" width="34" height="34" viewBox="0 0 24 24">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            <svg class="accordion-icon accordion-icon-minus" width="34" height="34" viewBox="0 0 24 24">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </div>
+                    </label>
+                    <div class="accordion-content">
+                        <p>De jeito nenhum! Atendo brasileiros em qualquer lugar do mundo, seja você um recém-chegado
+                            tentando se adaptar, alguém que já mora fora há anos, ou quem está se preparando para
+                            imigrar. A terapia online rompe fronteiras!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <section id="footer" class="footerSection">
+        <div class="sectionContent">
+            <img src='assets/Hero_bluePattern.svg' className='division' />
+
+            <footer class="footer">
+                <img src="assets/footerPattern.svg" class="footersvg" alt="Padrão de rodapé" />
+                <div class="footer-content">
+                    <div class="logo-section">
+                        <div class="logo-container">
+                            <img src="assets/JessicaLogo2.svg" alt="Logo Jessica Vecchi" />
+                        </div>
+                    </div>
+
+                    <div class="text">
+                        <p>Toda mudança começa com um primeiro passo. Se você sente que é tempo de olhar pra dentro com
+                            mais carinho e consciência, me chama!</p>
+                    </div>
+
+                    <div class="links-section">
+                        <div class="legal-links">
+                            <a href="https://wa.me/+353838487398?text=Olá%2C%20gostaria%20de%20mais%20informações.">+353
+                                83 8487398</a>
+                            <a href="https://www.instagram.com/jessicavecchi.psi/">@jessicavecchi.psi</a>
+                            <a href="mailto:jessicavecchi.psi@gmail.com">jessicavecchi.psi@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyrightWrapper">
+                    <div>
+                        <h4>© 2025 Jessica Vecchi - Todos os direitos reservados.</h4>
+                    </div>
+                    <div class="us">
+                        <h4><a href="https://www.linkedin.com/in/juliagarbozza-graphicdesigner/">Design: Júlia
+                                Garbozza</a></h4>
+                        <h4><a href="https://www.linkedin.com/in/hectordiel/">Desenvolvido por: Hector Diel</a></h4>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </section>
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
