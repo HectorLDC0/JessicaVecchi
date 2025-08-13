@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400..900&display=swap');
 
 /* SOL GIRANDO */
-@keyframes rotateInfinite {
+@keyframes spin {
     from {
         transform: rotate(0deg);
     }
@@ -30,7 +30,7 @@
     box-sizing: border-box;
 }
 
-a{
+a {
     all: unset;
     cursor: pointer;
 }
@@ -66,7 +66,6 @@ section {
     scroll-snap-align: start;
     height: 100dvh;
     width: auto;
-    overflow: hidden;
 }
 
 /* SECTIONS COLORS */
@@ -128,11 +127,12 @@ button {
     font-size: 18px;
     font-weight: 700;
     color: var(--color);
+    background: var(--bege);
 }
 
 button:hover {
     background-color: var(--color);
-    color: white;
+    color: var(--bege);
 }
 
 
@@ -186,12 +186,12 @@ button:hover {
 
 /* GO BACK ARROW */
 
-.gobackArrow{
+.gobackArrow {
     cursor: pointer;
     transition: 0.3s;
 }
 
-.gobackArrow:hover{
+.gobackArrow:hover {
     transform: scale(1.3);
 }
 
@@ -223,24 +223,30 @@ button:hover {
 }
 
 /* Pattern de fundo da hero */
+
+.heroYellowPattern,
+.heroBluePattern {
+    width: 100%;
+    height: auto;
+    max-width: none;
+    
+}
+
 .heroYellowPattern {
     position: absolute;
     bottom: 25%;
     left: 0;
-    width: 100%;
     height: 100%;
 }
 
 .heroBluePattern {
     position: absolute;
     bottom: 0;
-    width: 100%;
 }
 
 .sideMenu {
     display: flex;
     flex-direction: column;
-    padding: 4em;
     position: fixed;
     left: -100%;
     top: 0;
@@ -250,7 +256,7 @@ button:hover {
     transition: width 0.3s ease;
     font-family: var(--font-primaria);
     font-size: 35pt;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--bege);
     transition: ease-in-out 0.3s;
     background-color: var(--blue);
@@ -272,7 +278,7 @@ button:hover {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 35px;
     align-items: center;
 }
 
@@ -469,7 +475,7 @@ button:hover {
     font-family: var(--font-primaria);
     font-size: 25pt;
     color: var(--blue);
-    align-self: baseline;
+    align-self: center;
 }
 
 .blogImageWrapper::-webkit-scrollbar {
@@ -488,6 +494,16 @@ button:hover {
 
 .blogSection {
     position: relative;
+}
+
+.sun {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    left: -19rem;
+    bottom: -18.5rem;
+    transform-origin: center center;
+    animation: spin 20s linear infinite;
 }
 
 /* FAQ SECTION */
@@ -704,4 +720,51 @@ button:hover {
 .us a {
     text-decoration: none;
     color: inherit;
+}
+
+/* BREAKPOINTS */
+
+@media (max-width: 1200px) {
+    .heroContent {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        text-align: center;
+        align-items: center;
+        width: 90%;
+        text-align: center;
+        z-index: 1;
+        color: var(--blue);
+        gap: 1em;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Hero section */
+    .socialIcons,
+    .openIcon {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .logo {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .logo img {
+        display: block;
+        margin: 0 auto;
+    }
 }
