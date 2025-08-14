@@ -80,7 +80,7 @@ section {
 .heroSection nav {
     display: flex;
     justify-content: space-between;
-    padding: 3rem;
+    padding: 4rem;
     position: relative;
     z-index: 2;
 }
@@ -228,8 +228,8 @@ button:hover {
 .heroBluePattern {
     width: 100%;
     height: auto;
-    max-width: none;
-    
+
+
 }
 
 .heroYellowPattern {
@@ -248,7 +248,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     position: fixed;
-    left: -100%;
+    left: -110%;
     top: 0;
     height: 100%;
     width: 100%;
@@ -261,6 +261,21 @@ button:hover {
     transition: ease-in-out 0.3s;
     background-color: var(--blue);
     z-index: 9999;
+}
+
+.sideGrafismo {
+    position: absolute;
+    width: 17rem;
+    height: 17rem;
+    left: -4rem;
+}
+
+.sideGrafismoRight {
+    position: absolute;
+    width: 17rem;
+    height: 17rem;
+    right: -4rem;
+    transform: rotate(180deg);
 }
 
 .sideMenu ul li a {
@@ -288,9 +303,9 @@ button:hover {
 
 /* LOGO */
 .logo {
-    width: 240px;
     object-fit: contain;
 }
+
 
 /* SOCIALMIDIA ICONS */
 .socialIcons {
@@ -348,10 +363,10 @@ button:hover {
 
 .mainWrapper p {
     max-width: 32%;
-    color: #f4efe6;
+    color: var(--bege);
     text-align: justify;
     font-family: var(--font-secundaria);
-    font-size: 16pt;
+    font-size: clamp(0.9rem, 1.5vw, 14pt);
     font-weight: 300;
     line-height: 2.1rem;
     letter-spacing: -0.1px;
@@ -422,7 +437,7 @@ button:hover {
 }
 
 .blogTituloWrapper h1 {
-    font-size: 40pt;
+    font-size: clamp(2.2rem, 4vw, 3.33rem);
     font-weight: 500;
     font-family: var(--font-primaria);
 }
@@ -430,7 +445,8 @@ button:hover {
 .blogTituloWrapper h3 {
     font-weight: 300;
     font-family: var(--font-secundaria);
-    font-size: 10pt;
+    font-size: clamp(0.9rem, 1.5vw, 14pt);
+    line-height: 1.6;
 }
 
 /* BLOG IMGS */
@@ -517,8 +533,8 @@ button:hover {
     font-family: var(--font-primaria);
     color: var(--blue);
     font-weight: 500;
-    margin-bottom: 2rem;
-    font-size: clamp(2.125rem, 4.25vw, 43.35pt);
+    margin-bottom: 8rem;
+    font-size: clamp(2.2rem, 4vw, 3.33rem);
 }
 
 .accordion-container {
@@ -548,7 +564,7 @@ button:hover {
     color: var(--blue);
     cursor: pointer;
     transition: background 0.3s;
-    font-size: clamp(1.08rem, 2.7vw, 27pt);
+    font-size: clamp(1.6rem, 3vw, 2.5rem);
 }
 
 .accordion-content {
@@ -559,6 +575,7 @@ button:hover {
     text-align: left;
     padding: 0 1rem 0 0;
     font-size: clamp(0.9rem, 1.5vw, 14pt);
+    color: var(--blue);
 }
 
 .accordion-toggle:checked~.accordion-content {
@@ -690,8 +707,14 @@ button:hover {
 }
 
 .legal-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.legal-links i {
+    font-size: 1.2em;
     color: #f4efe6;
-    text-decoration: none;
 }
 
 .legal-links a:hover {
@@ -725,6 +748,47 @@ button:hover {
 /* BREAKPOINTS */
 
 @media (max-width: 1200px) {
+
+    .heroYellowPattern,
+    .heroBluePattern {
+        width: 150%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 3rem;
+        /* gap leve */
+    }
+
+    .logo-section {
+        margin: 0;
+    }
+
+    .logo-section img {
+        width: clamp(180px, 15vw, 260px);
+        /* mínimo maior */
+    }
+
+    .text {
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .links-section {
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .legal-links {
+        align-items: center;
+        gap: 1rem;
+    }
+
     .heroContent {
         position: absolute;
         top: 50%;
@@ -736,14 +800,52 @@ button:hover {
         text-align: center;
         align-items: center;
         width: 90%;
-        text-align: center;
         z-index: 1;
         color: var(--blue);
         gap: 1em;
     }
+
+    .sun {
+        width: 400px;
+        height: 400px;
+        left: -12rem;
+        bottom: -12.5rem;
+    }
 }
 
 @media (max-width: 768px) {
+
+    .heroYellowPattern,
+    .heroBluePattern {
+        width: 220%;
+    }
+
+    .text {
+        display: none;
+    }
+
+    .footer-content {
+        gap: 4rem;
+        /* gap leve entre logo e links */
+    }
+
+    .logo-section {
+        margin: 0;
+    }
+
+    .logo-section img {
+        width: clamp(192px, 14vw, 220px);
+        /* mínimo maior */
+    }
+
+    .legal-links {
+        gap: 0.8rem;
+        font-size: clamp(10px, 4vw, 14pt);
+    }
+
+    .legal-links a {
+        font-size: inherit;
+    }
 
     /* Hero section */
     .socialIcons,
@@ -766,5 +868,28 @@ button:hover {
     .logo img {
         display: block;
         margin: 0 auto;
+    }
+
+    .sun {
+        width: 300px;
+        height: 300px;
+        left: -9rem;
+        bottom: -9.5rem;
+    }
+
+    .blogImageWrapper {
+        margin-top: 5%;
+    }
+
+    .blogTituloWrapper {
+        margin-bottom: 5%;
+    }
+
+    .accordion-container {
+        margin-bottom: 2rem;
+    }
+
+    .faqTitle {
+        margin-bottom: 2.5rem;
     }
 }
