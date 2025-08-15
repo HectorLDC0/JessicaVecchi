@@ -48,7 +48,7 @@ body {
     scroll-behavior: smooth;
     scrollbar-width: none;
     -ms-overflow-style: none;
-
+    background-color: var(--bege);
 }
 
 /* ROOT VARIABLES */
@@ -77,7 +77,7 @@ section {
 }
 
 /* NAVBAR */
-.heroSection nav {
+nav {
     display: flex;
     justify-content: space-between;
     padding: 4rem;
@@ -229,7 +229,6 @@ button:hover {
     width: 100%;
     height: auto;
 
-
 }
 
 .heroYellowPattern {
@@ -344,25 +343,33 @@ button:hover {
 
 .mainWrapper {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     text-align: justify;
     gap: 100px;
     z-index: 1;
-    height: 525px;
-    position: absolute;
-    left: 200px;
+    max-width: 50%;
+    position: relative;
+    /* trocado de absolute */
+    margin-left: 80px;
+    height: auto;
+    /* remove altura fixa */
 }
 
 .jessicaImg {
     position: relative;
-    width: 30em;
-    height: 30em;
+    height: 28em;
     object-fit: contain;
 }
 
-.mainWrapper p {
-    max-width: 32%;
+/* Alinhamento Otico */
+.pWrapper {
+    position: relative;
+    top: -10px;
+}
+
+.pWrapper p {
+    max-width: 100%;
     color: var(--bege);
     text-align: justify;
     font-family: var(--font-secundaria);
@@ -375,8 +382,8 @@ button:hover {
 .jessicaSvg {
     position: absolute;
     left: -20px;
-    top: 3em;
-    width: 40em;
+    top: 8em;
+    width: 35em;
     height: 36em;
 }
 
@@ -745,9 +752,191 @@ button:hover {
     color: inherit;
 }
 
+/* FOOTER PARA PAGINAS SECUNDARIAS */
+
+.footer-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: #f4efe6;
+    background-color: var(--blue);
+    padding: clamp(2rem, 5vw, 3.5rem) clamp(1rem, 10vw, 12rem);
+    margin-top: 4rem;
+    /* Espaçamento do conteúdo acima */
+    position: relative;
+    /* Em vez de absolute */
+    overflow: hidden;
+}
+
+.footersvg-page {
+    width: 100vw;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* ESTILOS PAGINA INSPIRACAO */
+
+.noSun {
+    width: 100%;
+
+}
+
+.post-title {
+    max-width: 70%;
+    /* Igual ao container para alinhar */
+    margin: 3% auto 3% auto;
+    /* Centraliza e dá espaço abaixo */
+    font-family: ode;
+    font-weight: 500;
+    color: var(--blue);
+    font-size: clamp(2.2rem, 4vw, 3.33rem);
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    /* Alinha topo da imagem e texto */
+    gap: 10%;
+    /* Espaço entre imagem e texto */
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.post-img {
+    max-width: 450px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.post-text {
+    text-align: justify;
+    font-family: var(--font-secundaria);
+    color: var(--blue);
+    font-size: clamp(0.9rem, 1.5vw, 14pt);
+    font-weight: 500;
+    line-height: 2.1rem;
+    letter-spacing: -0.1px;
+}
+
+.divider {
+    display: block;
+    max-width: 70%;
+    margin: 30px auto;
+    /* Centraliza e dá respiro */
+}
+
+.start-text {
+    max-width: 70%;
+    margin: auto;
+    text-align: justify;
+    font-family: var(--font-secundaria);
+    font-weight: 500;
+    color: var(--blue);
+    font-size: clamp(0.9rem, 1.5vw, 14pt);
+    line-height: 2.1rem;
+    letter-spacing: -0.1px;
+}
+
+.centered-text {
+    max-width: 80%;
+    margin: auto;
+    text-align: justify;
+    font-family: var(--font-secundaria);
+    font-weight: 500;
+    color: var(--blue);
+    font-size: clamp(0.9rem, 1.5vw, 14pt);
+    line-height: 2.1rem;
+    letter-spacing: -0.1px;
+
+    /* Fundo com opacidade */
+    background-color: rgba(234, 228, 220);
+
+    /* 20px de espaço interno */
+    padding: 90px;
+
+    /* Bordas levemente arredondadas (opcional) */
+    border-radius: 8px;
+
+}
+
+
+
 /* BREAKPOINTS */
 
+@media (max-width: 1600px) {
+
+    /* Correção aqui - era max-width */
+    .mainWrapper {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        /* foto ocupa espaço mínimo, parágrafo se adapta */
+        grid-template-areas:
+            "foto p1"
+            "p2 p2";
+        gap: 40px 70px;
+        /* gap vertical 20px, horizontal 30px */
+        align-items: start;
+        max-width: 60%;
+        margin-left: 15%;
+    }
+
+    .jessicaImg {
+        grid-area: foto;
+        justify-self: center;
+        height: 22em;
+    }
+
+    .jessicaSvg {
+        position: absolute;
+        left: -20px;
+        top: 3.5em;
+        width: 24em;
+        height: 24em;
+    }
+
+    .aboutmeP {
+        grid-area: p1;
+        max-width: 250px;
+        /* Muito mais estreito para quebrar mais linhas */
+    }
+
+    .aboutmeSecondP {
+        grid-area: p2;
+        margin-top: 30px;
+        margin-left: 0;
+        /* alinha com o início da foto */
+        text-align: justify;
+    }
+
+    .pWrapper {
+        display: contents;
+    }
+
+    .solSvg {
+        position: absolute;
+        width: 22em;
+        height: 22em;
+        bottom: -30px;
+        left: -180px;
+    }
+}
+
+@media (max-width: 1080px) {}
+
 @media (max-width: 1200px) {
+
+    .jessicaSvg {
+        position: absolute;
+        left: -20px;
+        top: 3em;
+        width: 18em;
+        height: 18em;
+    }
 
     .heroYellowPattern,
     .heroBluePattern {
