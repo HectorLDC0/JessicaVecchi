@@ -84,6 +84,7 @@ nav {
     padding: 4rem;
     position: relative;
     z-index: 2;
+
 }
 
 /* LOGO */
@@ -276,6 +277,8 @@ button:hover {
     width: 17rem;
     height: 17rem;
     left: -4rem;
+    z-index: -1;
+
 }
 
 .sideGrafismoRight {
@@ -284,6 +287,7 @@ button:hover {
     height: 17rem;
     right: -4rem;
     transform: rotate(180deg);
+    z-index: -1;
 }
 
 .sideMenu ul li a {
@@ -354,12 +358,11 @@ button:hover {
     align-items: flex-start;
     justify-content: center;
     text-align: justify;
-    gap: 100px;
+    gap: 200px;
     z-index: 1;
-    max-width: 50%;
+    max-width: 55%;
     position: relative;
-    margin-left: 150px;
-    height: auto;
+    margin-left: 300px;
 }
 
 .jessicaImg {
@@ -653,7 +656,6 @@ button:hover {
 
 .footerSection {
     height: auto;
-    min-height: 70vh;
     position: relative;
     z-index: 10;
 }
@@ -668,9 +670,10 @@ button:hover {
 }
 
 .footer {
+    margin-top: 10%;
     position: relative;
     width: 100%;
-    min-height: 75vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -732,7 +735,7 @@ button:hover {
 .legal-links {
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 25px;
     font-size: clamp(8px, 1.8vw, 16pt);
     align-items: start;
 }
@@ -877,28 +880,30 @@ button:hover {
         gap: 40px 70px;
         align-items: start;
         max-width: 60%;
-        margin-left: 15%;
     }
 
-
+    
+    .blogImageWrapper{
+        gap: 50px;
+    }
     .jessicaImg {
         grid-area: foto;
         justify-self: center;
-        height: 22em;
+        height: 21em;
     }
 
     .jessicaSvg {
         position: absolute;
         left: -20px;
-        top: 3.5em;
-        width: 24em;
-        height: 24em;
+        top: 2em;
+        width: 29em;
+        height: 29em;
     }
 
     .aboutmeP {
         grid-area: p1;
-        max-width: 250px;
-        /* Muito mais estreito para quebrar mais linhas */
+        width: 100%;
+        text-align: justify;
     }
 
     .aboutmeSecondP {
@@ -907,16 +912,18 @@ button:hover {
         margin-left: 0;
         /* alinha com o início da foto */
         text-align: justify;
+        min-width: 92%;
     }
 
     .pWrapper {
         display: contents;
+
     }
 
     .solSvg {
         position: absolute;
-        width: 22em;
-        height: 22em;
+        width: 18em;
+        height: 18em;
         bottom: -30px;
         left: -180px;
     }
@@ -925,107 +932,46 @@ button:hover {
     .text {
         display: none;
     }
-}
 
-/* Breakpoint para telas menores que 1080px */
-@media (max-width: 1079px) {
-    .aboutMeSection .sectionContent {
+    .sun {
+        width: 400px;
+        height: 400px;
+        left: -12.5rem;
+        bottom: -12rem;
+    }
+
+    /* INSPIRACAO */
+
+    .container {
         flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        padding: 2rem;
+        align-items: flex-start;
     }
 
-    /* Reordena os elementos usando order */
-    .jessicaSvg {
-        order: 1;
-        position: static;
-        /* Remove positioning absoluto */
-        width: clamp(200px, 50vw, 300px);
-        height: auto;
-        margin: 0 auto;
+    .post-img {
+        max-width: 600px;
+        margin-bottom: 1.5rem;
+        align-self: flex-start;
     }
 
-    .mainWrapper {
-        order: 2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-        max-width: 90%;
-        margin: 0;
-    }
-
-    .jessicaImg {
-        width: clamp(180px, 45vw, 320px);
-        height: auto;
-        margin: 0 auto;
-    }
-
-    .pWrapper {
-        order: 3;
-        width: clamp(180px, 45vw, 320px);
-        /* Alinha com o novo tamanho da foto */
-        max-width: clamp(180px, 45vw, 320px);
-        margin-top: 20px;
-    }
-
-    .pWrapper p {
+    .post-text {
         text-align: justify;
-        font-size: clamp(14px, 3.5vw, 16px);
-        line-height: 1.8;
-        margin-bottom: 0;
+
         width: 100%;
-        display: inline;
     }
 
-    /* Remove a quebra entre os parágrafos */
-    .pWrapper br {
-        display: none;
-    }
-
-    /* Faz os dois parágrafos se comportarem como texto contínuo */
-    .pWrapper .aboutmeP {
-        display: inline;
-    }
-
-    .pWrapper .aboutmeSecondP {
-        display: inline;
-    }
-
-    /* Ajusta o sol svg para mobile */
-    .solSvg {
-        display: none;
-        /* Esconde em mobile para não atrapalhar */
-    }
-
-    /* Mantém o carousel na posição original */
-    .word-carousel-container {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        margin: 0;
-    }
-
-    /* textos paginas secundarias */
-    .post-text,
-    .start-text,
-    .centered-text,
-    .centered-text-autoestima {
-        line-height: 1.6rem;
-    }
 
 }
-
 
 @media (max-width: 1200px) {
 
     /* Hero */
 
+    nav {
+        height: 140px;
+    }
+
     .logo img {
         width: clamp(200px, 17vw, 250px);
-        /* antes 140-180px */
         height: auto;
     }
 
@@ -1036,9 +982,9 @@ button:hover {
 
 
     .heroContent button {
-        font-size: clamp(14px, 1.5vw, 16px);
-        width: clamp(9em, 20vw, 11em);
-        height: clamp(2.5em, 6vw, 3em);
+        font-size: 16px;
+        width: 12em;
+        height: 3em;
     }
 
 
@@ -1109,14 +1055,122 @@ button:hover {
     }
 
     .sun {
-        width: 400px;
-        height: 400px;
-        left: -12rem;
-        bottom: -12.5rem;
+        width: 350px;
+        height: 350px;
+        left: -10.5rem;
+        bottom: -11rem;
     }
 }
 
+
+/* Breakpoint para telas menores que 1080px */
+@media (max-width: 1079px) {
+    .aboutMeSection .sectionContent {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 2rem;
+    }
+
+    .word-carousel-container {
+        height: 30px;
+    }
+
+    .word-item {
+        font-size: 16pt;
+    }
+
+    .jessicaSvg {
+        order: 1;
+        position: static;
+        width: clamp(200px, 50vw, 300px);
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .mainWrapper {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: clamp(240px, 75vw, 420px); /* 🔼 aumentei */
+        margin: 0 auto;
+    }
+
+    .jessicaImg {
+        width: 85%;   /* ocupa largura da mainWrapper */
+        height: auto;  /* mantém proporção */
+        display: block;
+        margin: 0 auto;
+    }
+
+    .pWrapper {
+        order: 3;
+        width: 100%;   /* mesma largura da foto */
+        margin-top: 20px;
+    }
+
+    .pWrapper p {
+        text-align: justify;
+        font-size: clamp(14px, 3.5vw, 16px);
+        line-height: 1.8;
+        margin-bottom: 0;
+        width: 100%;
+        display: inline;
+    }
+
+    /* Remove a quebra entre os parágrafos */
+    .pWrapper br {
+        display: none;
+    }
+
+    /* Faz os dois parágrafos se comportarem como texto contínuo */
+    .pWrapper .aboutmeP {
+        display: inline;
+    }
+
+    .pWrapper .aboutmeSecondP {
+        display: inline;
+    }
+
+    /* Ajusta o sol svg para mobile */
+    .solSvg {
+        display: none;
+    }
+
+    /* textos páginas secundárias */
+    .post-text,
+    .start-text,
+    .centered-text,
+    .centered-text-autoestima {
+        line-height: 1.6rem;
+        padding: 30px;
+    }
+}
+
+
 @media (max-width: 768px) {
+
+    .heroContent button {
+        width: 11em;
+        height: 3em;
+    }
+
+
+    .logo img {
+        width: 180px;
+    }
+
+    .gobackArrow {
+        display: none;
+    }
+
+    .sun {
+        width: 280px;
+        height: 280px;
+        left: -9rem;
+        bottom: -9rem;
+    }
 
 
     .heroYellowPattern,
@@ -1163,29 +1217,6 @@ button:hover {
         display: none;
     }
 
-    nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    .logo {
-        margin: 0 auto;
-        text-align: center;
-    }
-
-    .logo img {
-        display: block;
-        margin: 0 auto;
-    }
-
-    .sun {
-        width: 300px;
-        height: 300px;
-        left: -9rem;
-        bottom: -9.5rem;
-    }
 
     .blogImageWrapper {
         margin-top: 5%;
@@ -1202,9 +1233,36 @@ button:hover {
     .faqTitle {
         margin-bottom: 2.5rem;
     }
+
+    /* Side pages */
+
+    .container {
+        padding: 0 1rem;
+        gap: 1.5rem;
+    }
+
+    .post-img {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .post-text {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    nav {
+        align-items: center;
+    }
+
 }
 
 @media (max-width: 480px) {
+
+    nav {
+        align-items: center;
+    }
+
     .heroYellowPattern {
         bottom: 30%;
     }
