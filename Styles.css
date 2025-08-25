@@ -836,6 +836,16 @@ button:hover {
     letter-spacing: -0.1px;
 }
 
+ul.start-text {
+    padding-left: 4rem;
+    /* afasta a lista da margem esquerda */
+    list-style-position: inside;
+    /* mantém o marcador alinhado ao texto */
+}
+
+.desktop-break {
+    display: inline;
+}
 
 .centered-text {
     max-width: 80%;
@@ -882,10 +892,11 @@ button:hover {
         max-width: 60%;
     }
 
-    
-    .blogImageWrapper{
+
+    .blogImageWrapper {
         gap: 50px;
     }
+
     .jessicaImg {
         grid-area: foto;
         justify-self: center;
@@ -1068,24 +1079,41 @@ button:hover {
     .aboutMeSection .sectionContent {
         flex-direction: column;
         align-items: center;
-        gap: 30px;
-        padding: 2rem;
+        gap: 20px;
+        /* Reduzi o gap */
+        padding: 1.5rem;
+        /* Reduzi o padding */
+        min-height: 100vh;
+        /* Garante que use a altura total */
+        justify-content: center;
+        /* Centraliza verticalmente */
+    }
+
+    .pWrapper .aboutmeSecondP {
+        display: none;
+        font-size: 0;
+        line-height: 0;
     }
 
     .word-carousel-container {
         height: 30px;
+        order: 4;
+        /* Garante que fica por último */
     }
 
     .word-item {
         font-size: 16pt;
     }
 
+
     .jessicaSvg {
         order: 1;
         position: static;
-        width: clamp(200px, 50vw, 300px);
+        width: clamp(150px, 40vw, 250px);
+        /* Reduzi um pouco */
         height: auto;
-        margin: 0 auto;
+        margin: 0 auto 10px auto;
+        /* Menos margem inferior */
     }
 
     .mainWrapper {
@@ -1093,28 +1121,37 @@ button:hover {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: clamp(240px, 75vw, 420px); /* 🔼 aumentei */
+        width: clamp(280px, 80vw, 400px);
         margin: 0 auto;
+        gap: 15px;
+        /* Espaçamento entre foto e texto */
     }
 
     .jessicaImg {
-        width: 85%;   /* ocupa largura da mainWrapper */
-        height: auto;  /* mantém proporção */
+        width: 85%;
+        height: auto;
         display: block;
         margin: 0 auto;
+        border-radius: 8px;
+        /* Opcional: cantos arredondados */
     }
 
     .pWrapper {
         order: 3;
-        width: 100%;   /* mesma largura da foto */
-        margin-top: 20px;
+        width: 100%;
+        margin: 0;
+        /* Remove margin-top */
+        padding: 0 10px;
+        /* Pequeno padding lateral */
     }
 
     .pWrapper p {
         text-align: justify;
-        font-size: clamp(14px, 3.5vw, 16px);
-        line-height: 1.8;
-        margin-bottom: 0;
+        font-size: clamp(14px, 3.2vw, 15px);
+        /* Ligeiramente menor */
+        line-height: 1.6;
+        /* Reduzi para economizar espaço */
+        margin: 0;
         width: 100%;
         display: inline;
     }
@@ -1146,11 +1183,16 @@ button:hover {
         line-height: 1.6rem;
         padding: 30px;
     }
+
+    .desktop-break {
+        display: none;
+    }
 }
 
 
 @media (max-width: 768px) {
 
+    /* Hero - mantém o mesmo */
     .heroContent button {
         width: 11em;
         height: 3em;
@@ -1172,12 +1214,14 @@ button:hover {
         bottom: -9rem;
     }
 
-
     .heroYellowPattern,
     .heroBluePattern,
-    .noSun,
-    .footersvg {
+    .noSun {
         width: 220%;
+    }
+
+    .footersvg {
+        width: 190%
     }
 
     .heroYellowPattern {
@@ -1190,7 +1234,6 @@ button:hover {
 
     .footer-content {
         gap: 4rem;
-        /* gap leve entre logo e links */
     }
 
     .logo-section {
@@ -1199,7 +1242,6 @@ button:hover {
 
     .logo-section img {
         width: clamp(192px, 14vw, 220px);
-        /* mínimo maior */
     }
 
     .legal-links {
@@ -1211,21 +1253,99 @@ button:hover {
         font-size: inherit;
     }
 
-    /* Hero section */
     .socialIcons,
     .openIcon {
         display: none;
     }
 
+    /* BLOG SECTION MOBILE - OTIMIZADO */
+    .blogTituloWrapper {
+        text-align: center;
+        margin: 0 auto 1rem auto;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+
+    .blogTituloWrapper h1 {
+        display: none;
+    }
+
+    .blogTituloWrapper h3 {
+        font-size: 1rem;
+        margin: 0;
+        padding: 0;
+        color: transparent;
+        text-align: center;
+        max-width: 90%;
+        line-height: 1.3;
+        font-size: 0;
+        line-height: 0;
+    }
+
+    .blogTituloWrapper h3::before {
+        content: "Clique abaixo e leia mais sobre meu trabalho!";
+        display: block;
+        text-align: center;
+        color: var(--blue);
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+        line-height: 1.3;
+        font-weight: 500;
+        font-family: var(--font-primaria);
+    }
 
     .blogImageWrapper {
-        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        max-width: 95%;
+        margin: 0 auto;
+        padding: 0;
     }
 
-    .blogTituloWrapper {
-        margin-bottom: 5%;
+    .blogImageWrapper div {
+        width: 100%;
+        max-width: 280px;
+        /* Aumentado de 200px para 280px */
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
 
+    .blogImageWrapper a {
+        width: 100%;
+        display: block;
+    }
+
+    .blogImageWrapper img {
+        width: 100%;
+        /* Usa 100% do container */
+        max-width: 100%;
+        height: 120px;
+        /* Altura fixa - ajuste conforme necessário */
+        object-fit: cover;
+        /* Mantém proporção cortando se necessário */
+        object-position: center;
+        /* Centraliza o corte */
+        display: block;
+        margin: 0 auto;
+    }
+
+    .blogImageWrapper p {
+        font-size: 14pt;
+        text-align: center;
+        line-height: 1.2;
+        margin: 0.5rem 0 0;
+        /* Melhor espaçamento */
+        padding: 0 10px;
+    }
+
+    /* FAQ - mantém o mesmo */
     .accordion-container {
         margin-bottom: 2rem;
     }
@@ -1234,8 +1354,7 @@ button:hover {
         margin-bottom: 2.5rem;
     }
 
-    /* Side pages */
-
+    /* Side pages - mantém o mesmo */
     .container {
         padding: 0 1rem;
         gap: 1.5rem;
@@ -1247,17 +1366,47 @@ button:hover {
     }
 
     .post-text {
-        font-size: 1rem;
         max-width: 100%;
+        padding: 0px;
+    }
+
+     .post-title {
+        margin-left: 17.5%;
+    }
+
+    .start-text {
+        max-width: 100%;
+
     }
 
     nav {
         align-items: center;
     }
-
 }
 
 @media (max-width: 480px) {
+    .aboutMeSection .sectionContent {
+        padding: 1rem;
+        gap: 15px;
+    }
+
+     .post-title {
+        margin-left: 18%;
+    }
+
+    .jessicaSvg {
+        width: clamp(120px, 35vw, 200px);
+    }
+
+    .mainWrapper {
+        width: clamp(260px, 85vw, 350px);
+        gap: 12px;
+    }
+
+    .pWrapper p {
+        font-size: clamp(13px, 3vw, 14px);
+        line-height: 1.5;
+    }
 
     nav {
         align-items: center;
@@ -1273,8 +1422,45 @@ button:hover {
 
     .heroYellowPattern,
     .heroBluePattern,
-    .noSun,
-    .footersvg {
+    .noSun {
         width: 260%;
+    }
+
+    .footersvg {
+        width: 240%
+    }
+
+    /* BLOG MOBILE PEQUENO - OTIMIZADO */
+    .blogImageWrapper {
+        gap: 25px;
+        margin-top: 20px;
+        max-width: 95%;
+    }
+
+    .blogImageWrapper div {
+        max-width: 250px;
+        /* Aumentado de 180px para 250px */
+        width: 100%;
+        gap: 10px;
+    }
+
+    .blogImageWrapper img {
+        width: 100%;
+        /* Usa 100% do container */
+        max-width: 100%;
+        height: 100px;
+        /* Altura fixa menor para telas pequenas */
+        object-fit: cover;
+        /* Mantém proporção cortando se necessário */
+        object-position: center;
+        /* Centraliza o corte */
+    }
+
+    .blogImageWrapper p {
+        font-size: 13pt;
+        /* Ligeiramente maior que 12pt */
+        line-height: 1.3;
+        margin: 0.5rem 0 0;
+        padding: 0 5px;
     }
 }
