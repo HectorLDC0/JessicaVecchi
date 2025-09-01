@@ -570,6 +570,7 @@ button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    text-align: left;
     padding: 12px 0px;
     background-color: transparent;
     font-family: var(--font-primaria);
@@ -855,7 +856,6 @@ ul.start-text {
     letter-spacing: -0.1px;
     background-color: rgba(234, 228, 220);
     padding: 60px;
-    border-radius: 8px;
 }
 
 /* BREAKPOINTS */
@@ -1067,6 +1067,10 @@ ul.start-text {
         justify-content: center;
     }
 
+    .us {
+        gap:0;
+    }
+
 
     .pWrapper .aboutmeSecondP {
         display: none;
@@ -1087,7 +1091,7 @@ ul.start-text {
         order: 1;
         position: static;
         width: clamp(220px, 60vw, 380px);
-        transform: translateY(-30px);
+        transform: translateY(-50px);
         height: auto;
         margin: 0 auto 10px auto;
     }
@@ -1191,17 +1195,11 @@ ul.start-text {
         line-height: 2.1rem;
         letter-spacing: -0.1px;
         padding: 50px;
-        border-radius: 20px;
     }
 
-    .post-title,
-    .start-text,
-    .centered-text-autoestima {
-        width: 90%;
-        margin: 0 auto;
-        text-align: justify;
+    .centered-text-autoestima{
+        padding: 20px;
     }
-
     .post-title {
         margin-top: 1rem;
     }
@@ -1220,6 +1218,10 @@ ul.start-text {
 }
 
 @media (max-width: 768px) {
+
+    .accordion-label{
+        align-items: left;
+    }
 
     /* Hero  */
     .heroContent button {
@@ -1261,7 +1263,7 @@ ul.start-text {
     }
 
     .heroYellowPattern {
-        bottom: 25%;
+        bottom: 30%;
     }
 
     .text {
@@ -1295,6 +1297,16 @@ ul.start-text {
     }
 
     /* BLOG SECTION MOBILE */
+
+    .blogImageWrapper div:nth-child(2) a img {
+        content: url("assets/Tcc_mobile.png");
+    }
+
+    .blogImageWrapper div:nth-child(3) a img {
+        content: url("assets/abordagem_mobile.png");
+    }
+
+
     .blogTituloWrapper {
         text-align: center;
         margin: 0 auto 1rem auto;
@@ -1401,12 +1413,21 @@ ul.start-text {
     ul.start-text {
         padding-left: 1rem;
     }
+
 }
 
 @media (max-width: 480px) {
     .aboutMeSection .sectionContent {
         padding: 1rem;
         gap: 15px;
+    }
+
+    .copyrightWrapper {
+        flex-direction: column;
+    }
+
+    .us{
+        gap: 10px;
     }
 
     .post-title {
@@ -1438,7 +1459,7 @@ ul.start-text {
     }
 
     .heroYellowPattern {
-        bottom: 30%;
+        bottom: 35%;
     }
 
     .heroContent button {
