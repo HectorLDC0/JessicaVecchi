@@ -777,7 +777,10 @@ button:hover {
 /* ESTILOS PAGINA INSPIRACAO */
 
 .noSun {
-    width: 100%;
+    width: 100vw;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
 
 .post-title {
