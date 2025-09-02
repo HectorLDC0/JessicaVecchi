@@ -1251,7 +1251,8 @@ ul.start-text {
 
     .heroYellowPattern,
     .heroBluePattern {
-        width: 220vw;
+        width: 220dvw;
+        z-index: 9000;
     }
 
     .noSun {
