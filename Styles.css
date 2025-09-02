@@ -109,6 +109,8 @@ nav .logo {
     position: relative;
     display: flex;
     flex-direction: column;
+    overflow: hidden; 
+    width: 100vw;
 }
 
 .heroSection .sectionContent {
@@ -233,12 +235,15 @@ button:hover {
 .heroBluePattern {
     width: 100%;
     height: auto;
+    position: absolute;
+    position: absolute;
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); 
 }
 
 .heroYellowPattern {
     position: absolute;
     bottom: 25%;
-    left: 0;
     height: 100%;
 }
 
@@ -1218,6 +1223,23 @@ ul.start-text {
 }
 
 @media (max-width: 768px) {
+
+    .heroSection{
+        overflow-x: hidden; 
+        width: 100vw;
+        max-width: 100vw;
+    }
+
+    .heroSection::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        z-index: -1;
+    }
 
     .accordion-label{
         align-items: left;
