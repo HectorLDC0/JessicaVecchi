@@ -1145,7 +1145,7 @@ ul.start-text {
     }
 
     .pWrapper .aboutmeP::before {
-        content: "Sou psicóloga há mais de 10 anos, brasileira vivendo em Dublin. Depois de anos trabalhando com psicanálise, me redescobri na Terapia Cognitivo-Comportamental (TCC), especialmente após meu diagnóstico de TDAH aos 29 anos. Hoje atendo online brasileiros espalhados por mais de 10 países, focando em autoestima e liberdade no dia a dia.";
+        content: "Sou psicóloga há mais de 10 anos, brasileira vivendo em Dublin. Depois de anos trabalhando com psicanálise, me redescobri na Terapia Cognitivo-Comportamental (TCC), especialmente depois do meu diagnóstico de TDAH aos 29 anos.  Hoje, atendo online, brasileiros que estão espalhados por mais de 10 países.";
         display: block;
         font-size: clamp(14px, 3.2vw, 15px);
         line-height: 1.6;
@@ -1251,7 +1251,7 @@ ul.start-text {
 
     .heroYellowPattern,
     .heroBluePattern {
-        width: 220%;
+        width: 220vw;
     }
 
     .noSun {
