@@ -1123,14 +1123,12 @@ ul.start-text {
     }
 
     .mainWrapper {
-        margin-top: -100px;
+        margin-top: -110px;
     }
 
     .jessicaImg {
-        width: 70%;
+        width: 60%;
         height: auto;
-        display: block;
-        margin: 0 auto 10px auto;
     }
 
     .pWrapper {
@@ -1243,7 +1241,7 @@ ul.start-text {
         color: var(--bege);
         display: block;
         font-weight: 400;
-        font-size: 40pt
+        font-size: 32pt
     }
 
     .heroSection {
