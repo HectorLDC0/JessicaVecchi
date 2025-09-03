@@ -75,6 +75,9 @@ section {
     background-color: var(--bege);
 }
 
+.mobile-tittle {
+    display: none;
+}
 
 /* NAVBAR */
 nav {
@@ -1230,6 +1233,18 @@ ul.start-text {
 }
 
 @media (max-width: 768px) {
+
+    .jessicaSvg {
+        display: none;
+    }
+
+    .mobile-tittle {
+        font-family: var(--font-primaria);
+        color: var(--bege);
+        display: block;
+        font-weight: 400;
+        font-size: 40pt
+    }
 
     .heroSection {
         overflow-x: hidden;
