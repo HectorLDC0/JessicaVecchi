@@ -644,6 +644,211 @@ button:hover {
     opacity: 1;
     transform: rotate(0deg);
 }
+/* Pictures */
+
+.galeriaSection {
+    background-color: var(--bege);
+    position: relative;
+    overflow: hidden;
+}
+
+.galeriaTituloWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 80%;
+    color: var(--blue);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.galeriaTituloWrapper h1 {
+    font-size: clamp(2.2rem, 4vw, 3.33rem);
+    font-weight: 500;
+    font-family: var(--font-primaria);
+}
+
+.galeriaTituloWrapper h1 em {
+    font-style: italic;
+    color: var(--brown);
+}
+
+.galeriaTituloWrapper h3 {
+    font-weight: 300;
+    font-family: var(--font-secundaria);
+    font-size: clamp(0.9rem, 1.5vw, 14pt);
+    line-height: 1.6;
+}
+
+/* CAROUSEL WRAPPER */
+.galeriaCarouselWrapper {
+    width: 80%;
+    overflow: hidden;
+    position: relative;
+}
+
+.galeriaTrack {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.55s cubic-bezier(0.77, 0, 0.175, 1);
+    will-change: transform;
+}
+
+/* CARDS */
+.galeriaCard {
+    flex: 0 0 calc(33.333% - 16px);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.galeriaCard::before {
+    content: '';
+    display: block;
+    padding-top: 120%;
+}
+
+.galeriaCard img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.galeriaCard:hover img {
+    transform: scale(1.05);
+}
+
+/* Linha dourada no hover (igual ao estilo do site) */
+.galeriaCard::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--yellow);
+    transition: width 0.45s ease;
+}
+
+.galeriaCard:hover::after {
+    width: 100%;
+}
+
+/* Overlay com legenda */
+.galeriaOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 23, 81, 0.65) 0%, transparent 55%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.galeriaCard:hover .galeriaOverlay {
+    opacity: 1;
+}
+
+.galeriaOverlay span {
+    color: var(--bege);
+    font-family: var(--font-primaria);
+    font-size: 16pt;
+    font-weight: 400;
+    transform: translateY(6px);
+    transition: transform 0.4s ease;
+}
+
+.galeriaCard:hover .galeriaOverlay span {
+    transform: translateY(0);
+}
+
+/* CONTROLES */
+.galeriaControles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 36px;
+}
+
+.galeriaSeta {
+    all: unset;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue);
+    font-size: 18px;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    line-height: 1;
+    text-align: center;
+}
+
+.galeriaSeta:hover {
+    background-color: var(--blue);
+    color: var(--bege);
+    transform: scale(1.05);
+}
+
+.galeriaDots {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.galeriaDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ccc;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.galeriaDot.active {
+    background: var(--yellow);
+    transform: scale(1.3);
+}
+
+
+@media (max-width: 1079px) {
+    .galeriaCard {
+        flex: 0 0 calc(50% - 12px);
+    }
+
+}
+
+@media (max-width: 768px) {
+    .galeriaCarouselWrapper {
+        width: 90%;
+    }
+
+    .galeriaCard {
+        flex: 0 0 calc(80% - 12px);
+    }
+
+    .galeriaTituloWrapper h1 {
+        font-size: 1.8rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .galeriaCard {
+        flex: 0 0 calc(90% - 12px);
+    }
+}
 
 /* FOOTER SECTION */
 .footerSection .sectionContent {
